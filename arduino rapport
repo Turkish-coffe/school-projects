@@ -1,0 +1,31 @@
+bonjour,
+
+aujourd'hui je m'en vais vous présenter mon projet arduino (que vous trouverez sur mon profil github) et qui n'est autre 
+qu'un loquet automatisé fonction par bluethooth. 
+comment ai-je choisis ce projet me direz-vous, et bien figurez vous qu'un soir, en revenant de l'école je fus tres chargé et 
+ayant un bon nombre de clef sur mon trousseau, j'eus pris une bonne dizainne de minutes à ouvrir la porte d'entrée de mon 
+appartement. Puis apres mûre reflexion, je fus pris de l'idée suivante: pourquoi ne pas associé ces clef directement à son
+portable? Et c'est donc ainsi qu'est né ce projet.
+
+
+cocernant la partie technique le projet est composé d'une partie hardware, à savoir : 
+
+-la carte à micro-controleur arduino uno, servant de support au projet en ordonnant les differentes entrées et sorties des
+peripheriques et accueillant la partie software.
+-la carte bluethooth HC-06 permettant le relais entre l'application moblie permettant d'actionner le loquet et la carte arduino
+-le moteur SG-90 permettant de changer le loquet de position en fonction de l'ordre demandé.
+-un trombone reliant le moteur au loquet 
+- 3 résistances de 20 ohm, permettant au circuit de fonctionner en toute sécurité.
+-quelques fils, reliant les dipoles du circuit 
+
+cocernant la partie software, il y a tout d'abord le code arduino uno, qui fut assez difficile et ceux pour la raison suivante:
+comment faire pour que arduino se rappelle de la position initiale de départ une fois le circuit éteint etant donné qu'a la
+réouverture, la il y aura réinitialisation, et plus généralement comment fait-il pour savoir la position du locquet actuel?
+afin de résoudre ce probleme, nous j'ai dû avoir recours à une bibliotheque qui n'est autre qu'EEPROM; ce module va nous 
+permettre d'enrgistrer les informations et de les utiliser même dans le cas ou nous avons à couper le circuit.
+pour plus d'informations vous pouvez consulter le code en ligne , des commentaires sont inclus dans le code pour pouvoir mieux
+comprendre comment fonctionne cette bibliotheque.
+
+l'application fus codée par Efe Selim Kuçuk: connaissant java script, il a pu coder l'application et je tiens à le remercier
+pour son aide precieuse. 
+si vous etes interessés par l'application je peux la mettre sur github à votre demande.
